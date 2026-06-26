@@ -56,21 +56,21 @@ public class CovenantCommandService(
                 PaperworkError.InvalidCovenantStatus,
                 localizer[nameof(PaperworkError.InvalidCovenantStatus)]);
 
-        if (await covenantRepository.ExistsByDocumentIdentifierAsync(documentIdentifier, cancellationToken))
-            return Result<Covenant>.Failure(
-                PaperworkError.DuplicateDocumentIdentifier,
-                localizer[nameof(PaperworkError.DuplicateDocumentIdentifier)]);
-
-        var covenant = new Covenant(
-            new CapbaseIdentifier(documentIdentifier),
-            new PartyId(clientId),
-            new LegalityPeriod(command.PeriodStartDate, command.PeriodEndDate),
-            new MonetaryAmount(command.MonetaryAmountValue, command.MonetaryAmountCurrency),
-            status,
-            command.Footnotes);
-
         try
         {
+            if (await covenantRepository.ExistsByDocumentIdentifierAsync(documentIdentifier, cancellationToken))
+                return Result<Covenant>.Failure(
+                    PaperworkError.DuplicateDocumentIdentifier,
+                    localizer[nameof(PaperworkError.DuplicateDocumentIdentifier)]);
+
+            var covenant = new Covenant(
+                new CapbaseIdentifier(documentIdentifier),
+                new PartyId(clientId),
+                new LegalityPeriod(command.PeriodStartDate, command.PeriodEndDate),
+                new MonetaryAmount(command.MonetaryAmountValue, command.MonetaryAmountCurrency),
+                status,
+                command.Footnotes);
+
             await covenantRepository.AddAsync(covenant, cancellationToken);
             await unitOfWork.CompleteAsync(cancellationToken);
             return Result<Covenant>.Success(covenant);
