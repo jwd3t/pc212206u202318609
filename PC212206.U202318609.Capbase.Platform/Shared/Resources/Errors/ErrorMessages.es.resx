@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="GenericError" xml:space="preserve">
+    <value>Ocurrió un error.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>La operación fue cancelada.</value>
+  </data>
+  <data name="InvalidRequest" xml:space="preserve">
+    <value>La solicitud no es válida.</value>
+  </data>
+  <data name="ResourceNotFound" xml:space="preserve">
+    <value>No se encontró el recurso solicitado.</value>
+  </data>
+  <data name="DuplicateResource" xml:space="preserve">
+    <value>Ya existe un recurso con la misma identidad.</value>
+  </data>
+  <data name="UnexpectedPersistenceError" xml:space="preserve">
+    <value>Ocurrió un error de persistencia al procesar la solicitud.</value>
+  </data>
+  <data name="UnexpectedServerError" xml:space="preserve">
+    <value>Ocurrió un error inesperado del servidor.</value>
+  </data>
+</root>

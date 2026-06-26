@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Error Interno del Servidor</value>
+  </data>
+  <data name="OperationCancelledTitle" xml:space="preserve">
+    <value>Operación Cancelada</value>
+  </data>
+  <data name="BadRequest" xml:space="preserve">
+    <value>Solicitud Incorrecta</value>
+  </data>
+  <data name="Conflict" xml:space="preserve">
+    <value>Conflicto</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>No Encontrado</value>
+  </data>
+</root>
