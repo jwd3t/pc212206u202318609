@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="InvalidDocumentIdentifier" xml:space="preserve">
+    <value>El identificador del documento debe ser un GUID válido.</value>
+  </data>
+  <data name="InvalidClientId" xml:space="preserve">
+    <value>El identificador del cliente debe ser un GUID válido.</value>
+  </data>
+  <data name="InvalidLegalityPeriod" xml:space="preserve">
+    <value>La fecha de fin del período debe ser mayor que la fecha de inicio.</value>
+  </data>
+  <data name="InvalidMonetaryAmountValue" xml:space="preserve">
+    <value>El valor del monto monetario debe ser mayor o igual que cero.</value>
+  </data>
+  <data name="InvalidMonetaryAmountCurrency" xml:space="preserve">
+    <value>La moneda del monto monetario es obligatoria.</value>
+  </data>
+  <data name="InvalidCovenantStatus" xml:space="preserve">
+    <value>El estado del covenant no es válido.</value>
+  </data>
+  <data name="DuplicateDocumentIdentifier" xml:space="preserve">
+    <value>Ya existe un covenant con el mismo identificador de documento.</value>
+  </data>
+  <data name="OperationCancelled" xml:space="preserve">
+    <value>La operación del covenant fue cancelada.</value>
+  </data>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>Ocurrió un error de base de datos al guardar el covenant.</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Ocurrió un error interno inesperado al procesar el covenant.</value>
+  </data>
+</root>

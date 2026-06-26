@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PC212206.U202318609.Capbase.Platform.Paperwork.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 using PC212206.U202318609.Capbase.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Configuration.Extensions;
 using PC212206.U202318609.Capbase.Platform.Shared.Infrastructure.Persistence.EntityFrameworkCore.Interceptors;
 
@@ -33,7 +34,8 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
     {
         base.OnModelCreating(builder);
 
-        // Paperwork configuration will be added here as the bounded context is implemented.
+        // Each bounded context registers its own persistence mapping here.
+        builder.ApplyPaperworkConfiguration();
 
         // General Naming Convention for the database objects
         builder.UseSnakeCaseNamingConvention();

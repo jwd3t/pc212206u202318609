@@ -21,4 +21,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="10.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Paperwork\Application\" />
+    <Folder Include="Paperwork\Domain\" />
+    <Folder Include="Paperwork\Infrastructure\" />
+    <Folder Include="Paperwork\Interfaces\" />
+    <Folder Include="Shared\Domain\Model\ValueObjects\" />
+  </ItemGroup>
+
 </Project>
