@@ -11,7 +11,7 @@ using PC212206.U202318609.Capbase.Platform.Shared.Infrastructure.Persistence.Ent
 namespace PC212206.U202318609.Capbase.Platform.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260626192519_initialCreate")]
+    [Migration("20260626201314_initialCreate")]
     partial class initialCreate
     {
         /// <inheritdoc />
